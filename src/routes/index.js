@@ -27,11 +27,14 @@ route.get("/user/:id", UserController.getOneUser);
 route.patch("/user/:id", UserController.updateOneUser);
 
 route.post(
-  "/course/create",
+  "/course/create/:id",
   verifyToken,
   verifyAccess("admin"),
   CourseController.createCourse
 );
+route.get("/course/all", CourseController.getAllCourses);
+route.get("/course/:id", CourseController.getOneCourse);
+route.patch("/course/:id", CourseController.updateOneCourse);
 
 route.post(
   "/class/create",
@@ -39,5 +42,7 @@ route.post(
   verifyAccess("admin"),
   ClassController.createClass
 );
+route.get("/class/all", ClassController.getAllClasses);
+route.get("/class/:id", ClassController.getOneClass);
 
 export default route;

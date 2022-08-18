@@ -22,6 +22,7 @@ classSchema.pre(/^find/, function (next) {
     select: "firstName lastName role email",
   }).populate({
     path: "course",
+    select: "courseName",
   });
   next();
 });

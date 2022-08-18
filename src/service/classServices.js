@@ -5,8 +5,20 @@ class ClassServices {
   static async createClass(req) {
     //dupassingemo kugirango ibya user ibibike
     req.body.user = req.user._id;
-    req.body.params = req.params.id;
+    req.body.course = req.params.id;
     const clas = await Classes.create(req.body);
+    return clas;
+  }
+  static async getAllCourses(req) {
+    const courses = await Classes.find();
+    return courses;
+  }
+  static async getAllClasses(req) {
+    const classes = await Classes.find();
+    return classes;
+  }
+  static async getOneClass(req) {
+    const clas = await Classes.findById(req.params.id);
     return clas;
   }
 }

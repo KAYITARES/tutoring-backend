@@ -9,10 +9,10 @@ const courseSchema = new mongoose.Schema(
     },
     class: {
       type: mongoose.Schema.ObjectId,
-
       ref: "Class",
     },
     courseName: String,
+    courseTitle: Sring,
     content: String,
     coursestatus: {
       type: String,
@@ -20,6 +20,7 @@ const courseSchema = new mongoose.Schema(
       default: "Enable",
     },
     duration: String,
+    createdBy: String,
   },
   { timestamps: true }
 );
