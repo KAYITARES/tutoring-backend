@@ -1,8 +1,8 @@
 const verifyAccess = (requiredRole) => {
   return async (req, res, next) => {
     try {
-      // console.log (req.user)
-      const role = req.user;
+      console.log(req.user);
+      const { role } = req.user;
       if (requiredRole != role) {
         return res
           .status(401)

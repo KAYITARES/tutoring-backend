@@ -1,5 +1,7 @@
 import { Router } from "express";
 import UserController from "../controller/userController";
+import ClassController from "../controller/classControler";
+import CourseController from "../controller/courseController";
 import DataChecker from "../middlewares/datachecker";
 import Validator from "../middlewares/validator";
 import verifyToken from "../middlewares/verifyToken";
@@ -23,4 +25,19 @@ route.get(
 );
 route.get("/user/:id", UserController.getOneUser);
 route.patch("/user/:id", UserController.updateOneUser);
+
+route.post(
+  "/course/create",
+  verifyToken,
+  verifyAccess("admin"),
+  CourseController.createCourse
+);
+
+route.post(
+  "/class/create",
+  verifyToken,
+  verifyAccess("admin"),
+  ClassController.createClass
+);
+
 export default route;

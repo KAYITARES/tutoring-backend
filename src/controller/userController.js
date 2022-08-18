@@ -24,7 +24,9 @@ class UserController {
     const user = await UserServices.loginUser(req);
 
     if (!user) {
-      return res.status(400).json({ message: "User is not exist" });
+      return res
+        .status(400)
+        .json({ error: "user not found! kindly register first" });
     }
     if (bcrypt.compareSync(req.body.password, user.password)) {
       user.password = null;
