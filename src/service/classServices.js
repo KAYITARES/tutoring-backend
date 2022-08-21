@@ -9,10 +9,7 @@ class ClassServices {
     const clas = await Classes.create(req.body);
     return clas;
   }
-  static async getAllCourses(req) {
-    const courses = await Classes.find();
-    return courses;
-  }
+
   static async getAllClasses(req) {
     const classes = await Classes.find();
     return classes;

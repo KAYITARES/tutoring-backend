@@ -25,8 +25,6 @@ classSchema.pre(/^find/, function (next) {
     select: "firstName lastName role email",
   }).populate({
     path: "course",
-    select:
-      "courseName createdBy courseName courseImage courseTitle content duration",
   });
   next();
 });

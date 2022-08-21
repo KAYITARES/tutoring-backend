@@ -1,4 +1,4 @@
-import Courses from "../models/class";
+import Courses from "../models/courses";
 
 class CourseServices {
   //create class in db

@@ -13,7 +13,7 @@ const courseSchema = new mongoose.Schema(
     },
     courseName: String,
     courseImage: String,
-    courseTitle: Sring,
+    courseTitle: String,
     content: String,
     coursestatus: {
       type: String,
@@ -28,7 +28,6 @@ const courseSchema = new mongoose.Schema(
 courseSchema.pre(/^find/, function (next) {
   this.populate({
     path: "user",
-
     select: "names phone email role ",
   }).populate({
     path: "class",
