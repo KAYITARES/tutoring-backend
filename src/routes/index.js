@@ -43,6 +43,5 @@ route.post(
   ClassController.createClass
 );
 route.get("/class/all", ClassController.getAllClasses);
-route.get("/class/:id", ClassController.getOneClass);
 
 export default route;

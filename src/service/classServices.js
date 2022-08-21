@@ -17,9 +17,5 @@ class ClassServices {
     const classes = await Classes.find();
     return classes;
   }
-  static async getOneClass(req) {
-    const clas = await Classes.findById(req.params.id);
-    return clas;
-  }
 }
 export default ClassServices;
