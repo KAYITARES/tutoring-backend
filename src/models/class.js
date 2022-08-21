@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 const classSchema = new mongoose.Schema(
   {
     className: String,
+    classeImage: String,
+    classICone: String,
+    classComp: String,
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
@@ -22,7 +25,8 @@ classSchema.pre(/^find/, function (next) {
     select: "firstName lastName role email",
   }).populate({
     path: "course",
-    select: "courseName",
+    select:
+      "courseName createdBy courseName courseImage courseTitle content duration",
   });
   next();
 });

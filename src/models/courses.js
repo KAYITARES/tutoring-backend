@@ -12,6 +12,7 @@ const courseSchema = new mongoose.Schema(
       ref: "Class",
     },
     courseName: String,
+    courseImage: String,
     courseTitle: Sring,
     content: String,
     coursestatus: {
