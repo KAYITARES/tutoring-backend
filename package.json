@@ -4,8 +4,9 @@
   "description": "tutoring web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-start": "nodemon --exec babel-node ./src/index.js"
+    "start": "babel-node  ./src/index.js",
+    "dev-start": "nodemon --exec babel-node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kayitare",
   "license": "ISC",
