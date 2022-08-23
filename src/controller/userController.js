@@ -10,7 +10,7 @@ class UserController {
     const newUser = await UserServices.createUser(req);
     if (!newUser) {
       return res.status(404).json({
-        message: "failed to Register",
+        message: "failed to Register!!",
       });
     }
 
