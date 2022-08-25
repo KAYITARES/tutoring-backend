@@ -37,7 +37,7 @@ route.get("/course/:id", CourseController.getOneCourse);
 route.patch("/course/:id", CourseController.updateOneCourse);
 
 route.post(
-  "/class/create",
+  "/class/create/:id",
   verifyToken,
   verifyAccess("admin"),
   ClassController.createClass

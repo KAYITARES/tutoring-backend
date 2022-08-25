@@ -17,7 +17,7 @@ class ClassController {
     }
     return res
       .status(200)
-      .json({ message: "classes found successfully", data: classes });
+      .json({ message: "classes found successfully!!", data: classes });
   }
 }
 export default ClassController;
